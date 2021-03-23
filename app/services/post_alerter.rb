@@ -356,7 +356,7 @@ class PostAlerter
 
     notification_data = {}
 
-    if is_liked &&
+    if (is_liked || Notification.types[:reaction]) &&
       existing_notification_of_same_type &&
       existing_notification_of_same_type.created_at > 1.day.ago &&
       (

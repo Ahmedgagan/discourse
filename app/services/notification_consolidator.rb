@@ -11,6 +11,9 @@ class NotificationConsolidator
     if notification_type == Notification.types[:liked]
       @consolidation_type = Notification.types[:liked_consolidated]
       @data[:username] = @data[:display_username]
+    elsif notification_type == Notification.types[:reaction]
+      @consolidation_type = Notification.types[:reaction_consolidated]
+      @data[:username] = @data[:display_username]
     elsif notification_type == Notification.types[:private_message]
       post_id = @data[:original_post_id]
       return if post_id.blank?

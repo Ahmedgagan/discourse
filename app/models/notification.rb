@@ -116,7 +116,8 @@ class Notification < ActiveRecord::Base
                         reaction: 25,
                         votes_released: 26,
                         event_reminder: 27,
-                        event_invitation: 28
+                        event_invitation: 28,
+                        reaction_consolidated: 29
                        )
   end
 
